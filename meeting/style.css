@@ -1,0 +1,117 @@
+:root{
+  --pink1:#ffd6e8;
+  --pink2:#ffb3d1;
+  --pink3:#ff8fc3;
+  --pink4:#e75d9c;
+  --text:#5a2a44;
+  --white:#fff;
+}
+*{box-sizing:border-box;}
+html,body{
+  height:100%;
+  margin:0;
+  font-family:'Segoe UI', Tahoma, sans-serif;
+  background:linear-gradient(160deg,var(--pink1),var(--pink2) 60%,var(--pink3));
+  color:var(--text);
+}
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100%;
+  padding:24px 16px;
+}
+.card{
+  background:var(--white);
+  border-radius:24px;
+  max-width:420px;
+  width:100%;
+  padding:32px 24px;
+  box-shadow:0 20px 40px rgba(231,93,156,0.25);
+  text-align:center;
+  position:relative;
+}
+h1{
+  font-size:1.4rem;
+  margin:0 0 6px;
+  color:var(--pink4);
+}
+p.sub{
+  font-size:0.9rem;
+  color:#a15c82;
+  margin:0 0 20px;
+}
+input, select{
+  width:100%;
+  padding:12px 14px;
+  border-radius:14px;
+  border:2px solid var(--pink2);
+  font-size:1rem;
+  margin-bottom:14px;
+  outline:none;
+  color:var(--text);
+  background:#fff7fb;
+}
+input:focus, select:focus{
+  border-color:var(--pink4);
+}
+button{
+  border:none;
+  border-radius:14px;
+  padding:12px 20px;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:transform .15s ease;
+}
+button:active{transform:scale(0.96);}
+.btn-main{
+  width:100%;
+  background:var(--pink4);
+  color:#fff;
+  margin-top:4px;
+}
+.btn-main:hover{background:#d9407f;}
+.choice-row{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  margin-top:18px;
+  position:relative;
+  min-height:56px;
+}
+#yesBtn{
+  background:var(--pink4);
+  color:#fff;
+  flex:1;
+  max-width:140px;
+}
+#noBtn{
+  background:#ffe3ef;
+  color:var(--pink4);
+  position:relative;
+  max-width:140px;
+  flex:1;
+  transition: transform .18s ease, background .18s ease;
+}
+.hidden{display:none !important;}
+.step{animation:fadeIn .35s ease;}
+@keyframes fadeIn{
+  from{opacity:0; transform:translateY(8px);}
+  to{opacity:1; transform:translateY(0);}
+}
+.emoji{font-size:2.2rem; margin-bottom:8px;}
+label{
+  display:block;
+  text-align:left;
+  font-size:0.85rem;
+  color:#a15c82;
+  margin-bottom:4px;
+  margin-top:10px;
+}
+.final-msg{
+  font-size:1.05rem;
+  color:var(--pink4);
+  font-weight:600;
+  margin-top:10px;
+}

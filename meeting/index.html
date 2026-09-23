@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taklifnoma 💌</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card" id="card">
+
+    <div id="step1" class="step">
+      <div class="emoji">💌</div>
+      <h1>Uchrashuvga taklif</h1>
+      <p class="sub">Ismini yoki familiyasini yoz va taklif tayyorla</p>
+      <label for="nameInput">Ism / Familiya</label>
+      <input type="text" id="nameInput" placeholder="Masalan: Dilnoza">
+      <button class="btn-main" onclick="showInvite()">Taklif tayyorlash 💕</button>
+    </div>
+
+    <div id="step2" class="step hidden">
+      <div class="emoji">🌸</div>
+      <h1 id="inviteTitle"></h1>
+      <p class="sub">Sen bilan uchrashishni juda xohlayman...</p>
+      <div class="choice-row">
+        <button id="yesBtn" onclick="showOptions()">Ha 💖</button>
+        <button id="noBtn" onmouseover="dodge()" ontouchstart="dodge(event)" onclick="dodge()">Yo'q</button>
+      </div>
+    </div>
+
+    <div id="step3" class="step hidden">
+      <div class="emoji">🎉</div>
+      <h1>Ajoyib! Nima qilamiz?</h1>
+      <label for="activity">Nima qilamiz</label>
+      <select id="activity">
+        <option value="Kino">🎬 Kino</option>
+        <option value="Sayr">🚶‍♀️ Sayr</option>
+        <option value="Bog'da aylanish">🌳 Bog'da aylanish</option>
+      </select>
+      <label for="dateInput">Sana</label>
+      <input type="date" id="dateInput">
+      <label for="timeInput">Vaqt</label>
+      <input type="time" id="timeInput">
+      <button class="btn-main" onclick="sendInvite()">Jo'natish 💌</button>
+    </div>
+
+    <div id="step4" class="step hidden">
+      <div class="emoji">💐</div>
+      <div class="final-msg" id="finalMsg"></div>
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
